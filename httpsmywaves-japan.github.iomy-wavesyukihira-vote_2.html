@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REFOUND — Which Yukihira Is Yours?</title>
+
+<!-- ============================================================
+  META PIXEL — replace YOUR_PIXEL_ID below with your real Pixel ID
+  (Meta Ads Manager > Events Manager > Data Sources > your Pixel)
+============================================================= -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'YOUR_PIXEL_ID');
+fbq('track', 'PageView');
+</script>
+
+<style>
+  :root{
+    --green:#3F5646;
+    --off-white:#F6F4EF;
+    --gold:#C6A25A;
+    --charcoal:#2F312D;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:'Georgia','Yu Mincho',serif;
+    background:var(--off-white);
+    color:var(--charcoal);
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{
+    max-width:620px;
+    margin:0 auto;
+    padding:56px 24px 80px;
+  }
+  .center{text-align:center;}
+  .header-bar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px 0;
+    border-bottom:1px solid #e6e2d8;
+    margin-bottom:48px;
+  }
+  .header-eyebrow{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:10px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:#9a9c94;
+  }
+  .header-logo img{
+    height:28px;
+    display:block;
+  }
+  .hero{
+    text-align:center;
+    margin-bottom:56px;
+  }
+  .intro{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:15px;
+    line-height:1.8;
+    color:#5a5c56;
+    max-width:480px;
+    margin:0 auto;
+  }
+  h1.page-title{
+    font-size:34px;
+    line-height:1.3;
+    font-weight:500;
+    margin-bottom:20px;
+  }
+  .divider{
+    width:36px;
+    height:1px;
+    background:var(--gold);
+    margin:32px auto;
+  }
+
+  .product-block{ margin-bottom:64px; }
+  .product-label{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:12px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:10px;
+    text-align:center;
+  }
+  img.product{
+    width:100%;
+    max-width:460px;
+    display:block;
+    margin:0 auto 28px;
+    border-radius:2px;
+  }
+  h2.product-title{
+    font-size:24px;
+    text-align:center;
+    margin-bottom:18px;
+    font-weight:500;
+  }
+  p.product-body{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:15px;
+    line-height:1.85;
+    color:#45473f;
+    margin-bottom:26px;
+  }
+  ul.specs{
+    list-style:none;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:14px;
+    color:#5a5c56;
+    background:#fff;
+    border:1px solid #e6e2d8;
+    border-radius:4px;
+    padding:20px 24px;
+    max-width:440px;
+    margin:0 auto;
+  }
+  ul.specs li{
+    display:flex;
+    justify-content:space-between;
+    gap:16px;
+    padding:8px 0;
+    border-bottom:1px solid #efece4;
+  }
+  ul.specs li:last-child{border-bottom:none;}
+  ul.specs .k{color:var(--gold); letter-spacing:0.04em; white-space:nowrap;}
+  ul.specs .v{color:var(--charcoal); text-align:right;}
+
+  .vote-section{ text-align:center; padding-top:16px; }
+  h3.vote-title{
+    font-size:26px;
+    margin-bottom:36px;
+    font-weight:500;
+  }
+  .vote-buttons{
+    display:flex;
+    gap:16px;
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+  button.vote-btn{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    background:var(--green);
+    color:var(--off-white);
+    border:none;
+    padding:18px 32px;
+    font-size:14px;
+    letter-spacing:0.04em;
+    cursor:pointer;
+    border-radius:2px;
+    transition:background 0.2s ease;
+    min-width:200px;
+  }
+  button.vote-btn:hover{background:#2c4033;}
+  button.vote-btn.b-btn{background:var(--charcoal);}
+  button.vote-btn.b-btn:hover{background:#3d403a;}
+
+  .thanks{
+    display:none;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:16px;
+    color:var(--green);
+    padding:24px 0;
+  }
+
+  .footnote{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:11px;
+    color:#9a9c94;
+    margin-top:64px;
+    letter-spacing:0.02em;
+    text-align:center;
+  }
+
+  @media (max-width:480px){
+    h1.page-title{font-size:26px;}
+    h2.product-title{font-size:21px;}
+    h3.vote-title{font-size:22px;}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="header-bar">
+      <span class="header-eyebrow">Product in Development</span>
+      <span class="header-logo"><img src="refound-logo-horizontal.png" alt="REFOUND"></span>
+    </div>
+
+    <div class="hero">
+      <h1 class="page-title">Which Yukihira Is Yours?</h1>
+      <p class="intro">
+        REFOUND brings traditional Japanese craft to the way you live today.
+        Our first product is a yukihira pan — a shape that's lived in Japanese
+        kitchens for generations — and we're developing it in two versions.
+        Take a look at both, and tell us which one belongs in your kitchen.
+      </p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ===================== PRODUCT A ===================== -->
+    <div class="product-block">
+      <div class="product-label">Option A</div>
+      <img class="product" src="yukihira-a.png" alt="Yukihira pan, anodized aluminum, fixed wooden handle">
+      <h2 class="product-title">Japan's Original Featherweight Pan</h2>
+      <p class="product-body">
+        The yukihira pan has been a staple of Japanese kitchens for generations —
+        thin, light metal that heats fast and stays remarkably light in your hand.
+        <br><br>
+        Making dashi, simmering miso soup, slow-cooking a nimono — these staples
+        of Japanese home cooking have relied on the yukihira pan for generations.
+        Simmered dishes in particular taste noticeably better made in one.
+        <br><br>
+        This version uses anodized aluminum, a refined evolution of the
+        traditional yukihira. The anodized surface resists corrosion, solving
+        aluminum's biggest drawback — its notoriously high-maintenance
+        surface. Shouldn't something you use every day be built to last,
+        without the hassle? We're also planning an interior measurement
+        scale and a double-sided spout for pouring from either side. All
+        the lightness, all the heritage of traditional aluminum — with
+        none of the upkeep.
+        <br><br>
+        Made by a long-established yukihira specialist workshop in Osaka.
+        From the hammered texture to the handle assembly, every step
+        happens in-house — genuinely made in Japan. Planned at 22cm, larger
+        than Japan's standard 18cm, to suit kitchens overseas.
+      </p>
+      <ul class="specs">
+        <li><span class="k">Material</span><span class="v">Anodized aluminum</span></li>
+        <li><span class="k">Size</span><span class="v">22cm (planned)</span></li>
+        <li><span class="k">Stovetop</span><span class="v">Gas only</span></li>
+        <li><span class="k">Features</span><span class="v">Interior measurement scale, double-sided spout</span></li>
+        <li><span class="k">Origin</span><span class="v">Osaka — long-established yukihira specialist workshop, fully in-house production</span></li>
+      </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ===================== PRODUCT B ===================== -->
+    <div class="product-block">
+      <div class="product-label">Option B</div>
+      <img class="product" src="yukihira-b.png" alt="Yukihira pan, stainless steel, detachable wooden handle">
+      <h2 class="product-title">One Pan, Every Stovetop.</h2>
+      <p class="product-body">
+        Japan's classic yukihira pan, reimagined for the modern kitchen. This
+        stainless version is being developed with a workshop in
+        Tsubame-Sanjo. The same fast, even heat — now compatible with
+        induction as well as gas.
+        <br><br>
+        The detachable handle has real history behind it. In Japanese
+        ryotei kitchens, where many dishes are finished at once, a fixed
+        handle gets in the way — so chefs have long used handle-less
+        yukihira pans with a tool called a yattoko, a dedicated
+        pan-gripper. This version swaps the yattoko for a handle that
+        simply clips on and off — the same professional logic, made
+        effortless for everyday use.
+        <br><br>
+        Switching to stainless steel means it works on any heat source.
+        It's a little heavier than the aluminum version, but stainless
+        tends to suit kitchens overseas better. Same iconic yukihira
+        shape as the original — redesigned for how modern kitchens
+        actually work.
+      </p>
+      <ul class="specs">
+        <li><span class="k">Material</span><span class="v">Stainless steel</span></li>
+        <li><span class="k">Size</span><span class="v">22cm (planned)</span></li>
+        <li><span class="k">Stovetop</span><span class="v">Induction &amp; Gas</span></li>
+        <li><span class="k">Handle</span><span class="v">Detachable — inspired by the traditional yattoko</span></li>
+        <li><span class="k">Origin</span><span class="v">Tsubame-Sanjo — Japan's legendary metalworking district</span></li>
+      </ul>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ===================== VOTE ===================== -->
+    <div class="vote-section">
+      <h3 class="vote-title">Which one belongs in your kitchen?</h3>
+      <div class="vote-buttons" id="voteButtons">
+        <button class="vote-btn a-btn" onclick="vote('A')">I prefer A →</button>
+        <button class="vote-btn b-btn" onclick="vote('B')">I prefer B →</button>
+      </div>
+      <div class="thanks" id="thanksMsg">Thank you. We'll let you know when this launches.</div>
+    </div>
+
+    <div class="footnote">
+      Found in Japan. Refined for the World.<br>
+      Release date and pricing to be announced.
+    </div>
+  </div>
+
+<script>
+function vote(choice){
+  document.getElementById('voteButtons').style.display = 'none';
+  document.getElementById('thanksMsg').style.display = 'block';
+  if (typeof fbq === 'function') {
+    fbq('track', 'Lead', {content_name: 'yukihira-vote-' + choice});
+  }
+}
+</script>
+</body>
+</html>
